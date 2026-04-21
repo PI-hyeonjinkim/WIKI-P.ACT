@@ -17,6 +17,11 @@
 
 ## 이력
 
+### 2026-04-21
+- 처리한 파일: raw/troubleshooting/2026-04-21_ec2-nginx-websocket-mqtt-tunnel.md
+- 생성된 wiki 항목: wiki/troubleshooting/ec2-nginx-websocket.md
+- 변경 요약: EC2 nginx WebSocket 경로 누락 + http2 충돌로 영상/MQTT 불가 트러블슈팅 추가
+
 ### 2026-04-17 — 초기화
 - 위키 구조 생성 (raw/, wiki/, output/ 폴더 및 CLAUDE.md)
 - wiki/index.md 초기화, wiki/log.md 초기화

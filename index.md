@@ -17,6 +17,7 @@
 
 - [[webrtc-blackscreen]] — black screen 3가지 케이스 (mediamtx 충돌 / coturn / WHEP timeout)
 - [[mqtt-reconnect]] — 부팅 후 MQTT 미연결, PTZ 명령 미동작
+- [[ec2-nginx-websocket]] — EC2 nginx WebSocket 미설정으로 영상/MQTT 연결 불가 (2026-04-21)
 
 ---
 
