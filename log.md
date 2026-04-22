@@ -4,6 +4,18 @@
 
 ---
 
+### 2026-04-22 — docs/ 체계 수립 반영
+
+처리한 파일: `docs/edge/`, `docs/platform/`, `docs/aws-proxy/`
+
+갱신된 wiki 항목:
+- `wiki/operations/edge-deployment.md` — Device UI 배포, 서비스 포트 정리, AI ON/OFF 전환 로직 추가
+- `wiki/architecture/platform-overview.md` — docker-compose 전체 서비스 구성, 백엔드 API 전체 목록, InfluxDB 버킷 추가
+
+변경 요약: docs/ 3개 폴더(edge/platform/aws-proxy) 신설 및 CLAUDE.md 재정리에 따라 위키 관련 항목 병합 갱신.
+
+---
+
 ### 2026-04-22 — memory/ 인계 문서 위키 이전
 
 출처: Claude Code 프로젝트 메모리 (`~/.claude/projects/.../memory/`)

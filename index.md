@@ -8,10 +8,10 @@
 ## 아키텍처 (`architecture/`)
 
 - [[system-overview]] — 제품 개요, 전체 구조도, 서비스 목록
-- [[networking]] — ZeroTier, EC2 프록시, coturn TURN 서버, MQTT 주의사항
+- [[networking]] — ZeroTier, EC2 프록시, coturn TURN 서버, Route53 DNS, MQTT 주의사항
 - [[webrtc-streaming]] — WebRTC 파이프라인, WHEP 시그널링, mediamtx 경로 설정
 - [[mqtt-architecture]] — MQTT 브로커 실제 구조, 토픽 목록, 브리지 추가 금지 이유
-- [[platform-overview]] — FastAPI 백엔드 API, 인증 구조, DB 스키마, 주요 파일 위치
+- [[platform-overview]] — FastAPI 백엔드 API, 인증 구조, docker-compose 서비스 구성, DB 스키마
 
 ---
 
@@ -34,5 +34,5 @@
 
 - [[firmware-update]] — 펌웨어 빌드·배포 절차, 롤백
 - [[service-management]] — 서비스 재시작, 로그 확인, 부팅 후 진단 체크리스트
-- [[edge-deployment]] — 엣지 디바이스 접속 정보, 서비스 목록, 파일 배포 방법, 모터 프로토콜
+- [[edge-deployment]] — 엣지 디바이스 접속/서비스/배포/Device UI/모터 프로토콜 (2026-04-22 갱신)
 - [[mokpo-field]] — 목포 물류장 14대 배포 현황, 운영 이슈, Grafana 접속 정보
