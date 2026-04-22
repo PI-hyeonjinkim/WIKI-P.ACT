@@ -4,6 +4,19 @@
 
 ---
 
+### 2026-04-22 — 신규 장비 설치 트러블슈팅 수록
+
+처리한 파일: `raw/troubleshooting/2026-04-22_신규장비-설치-전체과정.md`
+
+생성/갱신된 wiki 항목:
+- `wiki/troubleshooting/new-device-setup.md` (신규) — DNS/WHEP/GStreamer/Hailo/libredis/카메라 점유/Data Output 10가지 이슈 전체 수록
+- `wiki/edge/edge-sw.md` (병합) — 신규 장비 설치 체크리스트 10단계 추가
+- `wiki/index.md` (갱신) — new-device-setup 항목 추가
+
+변경 요약: ZeroTier 10.235.62.165 신규 장비 설치 실증에서 발견한 전체 오류 및 해결책 위키화. install.sh에 반영된 내용(GStreamer/hailo-all/libhiredis/libredis_export.so) 및 Data Output 이벤트 흐름 아키텍처 포함.
+
+---
+
 ### 2026-04-22 — docs/ 체계 수립 반영
 
 처리한 파일: `docs/edge/`, `docs/platform/`, `docs/aws-proxy/`

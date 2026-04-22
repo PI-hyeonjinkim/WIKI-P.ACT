@@ -37,6 +37,7 @@
 - [[mqtt-reconnect]] — 부팅 후 MQTT 미연결, PTZ 명령 미동작
 - [[ec2-nginx-websocket]] — EC2 nginx WebSocket 미설정으로 영상/MQTT 연결 불가
 - [[onvif-ghost-service]] — 카메라 혼자 움직이는 원인: 구버전 onvif.service 잔존
+- [[new-device-setup]] — 신규 장비 설치 전체 트러블슈팅 (DNS/WHEP/Hailo/libredis/Data Output)
 
 ---
 

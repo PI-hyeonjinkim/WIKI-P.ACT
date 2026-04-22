@@ -122,3 +122,30 @@ cat /home/ptz/edge/settings.json
 
 > ⚠️ journald 재부팅 후 로그 소실 방지:
 > `sudo sed -i 's/^#*Storage=.*/Storage=persistent/' /etc/systemd/journald.conf && sudo systemctl restart systemd-journald`
+
+---
+
+## 신규 장비 설치 체크리스트
+
+> 추가: 2026-04-22 (실증 기반)
+
+```
+[ ] 1. DNS 확인: curl -s https://api.paidevteam.com/health
+        실패 시 → nmcli로 DNS 8.8.8.8/1.1.1.1 수동 설정
+[ ] 2. install.sh 실행:
+        curl -fsSL https://api.paidevteam.com/firmware/edge-sw/install.sh | bash
+[ ] 3. Hailo 확인: ls /dev/hailo0
+        없으면 → sudo modprobe hailo_pci
+[ ] 4. GStreamer 확인: command -v gst-launch-1.0
+[ ] 5. libredis_export.so 확인:
+        ls /usr/lib/aarch64-linux-gnu/hailo/tappas/post_processes/libredis_export.so
+[ ] 6. mediamtx 스트림 확인:
+        curl -s http://localhost:9997/v3/paths/get/my_camera | python3 -c \
+          "import sys,json;d=json.load(sys.stdin);print('ready:',d['ready'])"
+[ ] 7. WHEP 확인: 브라우저에서 http://{장비IP}:8889/my_camera/whep
+[ ] 8. 플랫폼 등록 (auth PW = DEVICE_ID 마지막 세그먼트, 예: MK3-6d1c9f59 → "6d1c9f59")
+[ ] 9. AI ON 테스트 → WHEP 스트림 유지 확인
+[ ] 10. Data Output: 피플카운팅 ON + 외부 MQTT 설정 + Live Test Connect → 메시지 수신 확인
+```
+
+자세한 트러블슈팅: [[new-device-setup]]
