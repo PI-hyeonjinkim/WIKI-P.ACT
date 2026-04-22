@@ -4,6 +4,28 @@
 
 ---
 
+### 2026-04-22 — memory/ 인계 문서 위키 이전
+
+출처: Claude Code 프로젝트 메모리 (`~/.claude/projects/.../memory/`)
+
+처리한 메모리 파일:
+- `memory/onvif-ghost-service.md`
+- `memory/edge-device.md`
+- `memory/mqtt-architecture.md`
+- `memory/platform.md`
+- `memory/mokpo-deploy.md`
+
+생성된 wiki 항목:
+- `wiki/troubleshooting/onvif-ghost-service.md` (신규) — 카메라 혼자 움직이는 문제
+- `wiki/architecture/mqtt-architecture.md` (신규) — MQTT 브로커 구조 + 토픽 목록
+- `wiki/architecture/platform-overview.md` (신규) — FastAPI 백엔드 API + 인증 구조
+- `wiki/operations/edge-deployment.md` (신규) — 엣지 디바이스 배포 가이드
+- `wiki/operations/mokpo-field.md` (신규) — 목포 물류장 운영 가이드
+
+변경 요약: 팀 인계용 핵심 운영 지식 5건 위키에 수록. 트러블슈팅 1건 (ONVIF ghost service), 아키텍처 2건 (MQTT, 플랫폼), 운영 절차 2건 (엣지 배포, 목포 현장).
+
+---
+
 ## 형식
 
 ```
