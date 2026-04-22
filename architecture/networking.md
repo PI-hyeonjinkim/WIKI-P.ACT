@@ -60,6 +60,37 @@ max-port=65535
 
 ---
 
+## Route 53 DNS 구성 (paidevteam.com)
+
+모든 서브도메인이 단일 EC2 인스턴스(54.253.91.60)로 라우팅됨. EC2 nginx가 subdomain별로 내부 서비스로 프록시.
+
+**EC2 Public IP**: `54.253.91.60` (TTL 300s)
+
+| 도메인 | 타입 | 목적지 | 용도 |
+|--------|------|--------|------|
+| `paidevteam.com` | A | 54.253.91.60 | 루트 도메인 |
+| `www.paidevteam.com` | CNAME | paidevteam.com | www 리다이렉트 |
+| `api.paidevteam.com` | A | 54.253.91.60 | FastAPI 백엔드 + MQTT 프록시 |
+| `wiki.paidevteam.com` | A | 54.253.91.60 | LLM 위키 (Quartz, port 4000) |
+| `grafana.paidevteam.com` | A | 54.253.91.60 | Grafana 대시보드 (port 3001) |
+| `minio.paidevteam.com` | A | 54.253.91.60 | MinIO Console (port 9001) |
+| `s3.paidevteam.com` | A | 54.253.91.60 | MinIO S3 API (port 9000) |
+| `mlflow.paidevteam.com` | A | 54.253.91.60 | MLflow (port 5000) |
+| `prom.paidevteam.com` | A | 54.253.91.60 | Prometheus (port 9090) |
+| `bridge.paidevteam.com` | A | 54.253.91.60 | Bridge 서비스 |
+| `bridge-api.paidevteam.com` | A | 54.253.91.60 | Bridge API |
+
+**NS 서버** (AWS 자동 할당):
+- ns-1864.awsdns-41.co.uk
+- ns-534.awsdns-02.net
+- ns-411.awsdns-51.com
+- ns-1472.awsdns-56.org
+
+> EC2 nginx에서 subdomain별 `server_name` 설정으로 내부 서비스로 프록시함.
+> ZeroTier VPN(10.235.62.x)을 통해 플랫폼 서버(192.168.33.33)로 포워딩.
+
+---
+
 ## MQTT 브리지 금지 사항
 
 > ⚠️ paidevteam.com:1883은 nginx TCP 프록시 → 내부 mosquitto
