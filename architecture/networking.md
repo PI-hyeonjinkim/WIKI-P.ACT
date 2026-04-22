@@ -77,8 +77,8 @@ max-port=65535
 | `s3.paidevteam.com` | A | 54.253.91.60 | MinIO S3 API (port 9000) |
 | `mlflow.paidevteam.com` | A | 54.253.91.60 | MLflow (port 5000) |
 | `prom.paidevteam.com` | A | 54.253.91.60 | Prometheus (port 9090) |
-| `bridge.paidevteam.com` | A | 54.253.91.60 | Bridge 서비스 |
-| `bridge-api.paidevteam.com` | A | 54.253.91.60 | Bridge API |
+| `bridge.paidevteam.com` | A | 54.253.91.60 | ~~업무 공유 프로그램~~ (deprecated, 미사용) |
+| `bridge-api.paidevteam.com` | A | 54.253.91.60 | ~~Bridge API~~ (deprecated, 미사용) |
 
 **NS 서버** (AWS 자동 할당):
 - ns-1864.awsdns-41.co.uk
